@@ -1,5 +1,8 @@
 FROM centos:latest
 
+# File Author / Maintainer
+MAINTAINER Toni Hermoso Pulido <toni.hermoso@crg.eu>
+
 ARG PERLBREW_ROOT=/usr/local/perl
 ARG PERL_VERSION=5.24.1
 # Enable perl build options. Example: --build-arg PERL_BUILD="--thread --debug"
@@ -20,11 +23,15 @@ ENV PERLBREW_PATH $PERLBREW_ROOT/bin
 
 RUN perlbrew install $PERL_BUILD perl-$PERL_VERSION
 RUN perlbrew install-cpanm
-RUN perlbrew switch perl-$PERL_VERSION
+RUN bash -c 'source $PERLBREW_ROOT/etc/bashrc'
 		
-ENV PERLBREW_ROOT=$PELRBREW_ROOT \
-	PATH=$PELRBREW_ROOT/perls/perl-$PERL_VERSION/bin:$PATH \
-	PERLBREW_PERL=perl-$PERL_VERSION \
-	PERLBREW_MANPATH=$PELRBREW_ROOT/perls/perl-$PERL_VERSION/man \
-	PERLBREW_SKIP_INIT=1
+ENV PERLBREW_ROOT $PERLBREW_ROOT
+ENV PATH $PELRBREW_ROOT/perls/perl-$PERL_VERSION/bin:$PATH
+ENV PERLBREW_PERL perl-$PERL_VERSION
+ENV PERLBREW_MANPATH $PELRBREW_ROOT/perls/perl-$PERL_VERSION/man
+ENV PERLBREW_SKIP_INIT 1
 
+COPY entrypoint.sh entrypoint.sh
+RUN chmod +x entrypoint.sh
+
+ENTRYPOINT ["./entrypoint.sh"]

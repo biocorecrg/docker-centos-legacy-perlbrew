@@ -1,2 +1,4 @@
-# docker-centos-perlbrew
-Basic Docker image for running CentOS with perlbrew installed
+# CentOS Perlbrew images
+
+Images for running Perlbrew scripts using CentOS.
+

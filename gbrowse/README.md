@@ -6,3 +6,7 @@ docker run -d -it -p 8080:80 gbrowse
 
 Volume -> Databases. Loaded databases referenced in a custom GBrowse.conf
 
+Referencing Running mysql
+https://stackoverflow.com/questions/28056522/access-host-database-from-a-docker-container
+
+

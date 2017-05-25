@@ -114,7 +114,14 @@ RUN cd / ; \
     mkdir -p .config/inkscape .gnome2 ; \
     chown apache:apache .config/inkscape .gnome2
 
+# Adding Databases
+VOLUME ["/databases"]
+
+# Gbrowse should adapt
 COPY gbrowse2.conf /etc/httpd/conf.d/gbrowse2.conf
+
+# We mignt need to add modified GBrowse.conf here
+
 COPY httpd-foreground /usr/local/bin/httpd-foreground
 RUN chmod +x /usr/local/bin/httpd-foreground
 

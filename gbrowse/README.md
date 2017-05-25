@@ -4,3 +4,5 @@ Run service as:
 
 docker run -d -it -p 8080:80 gbrowse
 
+Volume -> Databases. Loaded databases referenced in a custom GBrowse.conf
+

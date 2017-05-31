@@ -114,6 +114,16 @@ RUN cd / ; \
     mkdir -p .config/inkscape .gnome2 ; \
     chown apache:apache .config/inkscape .gnome2
 
+# BigWig and Kent stuff
+# Seems that v334 is last working version with Bio::DB::BigWig https://github.com/GMOD/GBrowse-Adaptors/issues/17
+RUN cd /tmp; wget http://hgdownload.cse.ucsc.edu/admin/jksrc.v334.zip; unzip jksrc.v334.zip
+ENV CFLAGS="-O -fPIC"
+ENV MACHTYPE=i686
+RUN cd /tmp/kent/src/lib; make
+ENV KENT_SRC=/tmp/kent/src 
+
+RUN cpanm Bio::DB::BigWigSet
+
 # Adding Databases
 VOLUME ["/databases"]
 

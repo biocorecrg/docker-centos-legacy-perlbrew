@@ -116,7 +116,7 @@ RUN cd / ; \
 
 # BigWig and Kent stuff
 # Seems that v334 is last working version with Bio::DB::BigWig https://github.com/GMOD/GBrowse-Adaptors/issues/17
-RUN cd /tmp; wget http://hgdownload.cse.ucsc.edu/admin/jksrc.v334.zip; unzip jksrc.v334.zip
+RUN cd /tmp; wget ftp://ftp.sanger.ac.uk/pub/cancer/legacy-dependancies/jksrc.v334.zip; unzip jksrc.v334.zip
 ENV CFLAGS="-O -fPIC"
 ENV MACHTYPE=i686
 RUN cd /tmp/kent/src/lib; make

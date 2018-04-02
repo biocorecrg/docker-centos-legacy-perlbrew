@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM centos:centos7
 
 # File Author / Maintainer
 MAINTAINER Toni Hermoso Pulido <toni.hermoso@crg.eu>

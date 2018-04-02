@@ -1,4 +1,4 @@
-FROM biocorecrg/centos-perlbrew
+FROM biocorecrg/centos-perlbrew:centos7
 
 # File Author / Maintainer
 MAINTAINER Toni Hermoso Pulido <toni.hermoso@crg.eu>

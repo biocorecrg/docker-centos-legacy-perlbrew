@@ -3,7 +3,7 @@
 set -ueo pipefail
 
 SOURCE=https://github.com/CRG-CNAG/docker-centos-perlbrew
-VARIANTS=(base pyenv pyenv3 pyenv-java gbrowse)
+VARIANTS=(base pyenv pyenv3 pyenv-java pyenv3-java gbrowse)
 BRANCHES=(centos7)
 LATEST=centos7
 BASETAG=biocorecrg/centos-perlbrew

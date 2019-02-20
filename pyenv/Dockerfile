@@ -23,6 +23,9 @@ ENV PATH="$PYENV_ROOT/shims:$PYENV_ROOT/versions/$PYTHON_VERSION/bin:$PATH"
 RUN ln -s $PYENV_ROOT/versions/$PYTHON_VERSION/bin/python /usr/local/bin/python
 RUN ln -s $PYENV_ROOT/versions/$PYTHON_VERSION/bin/python2 /usr/local/bin/python2
 RUN ln -s $PYENV_ROOT/versions/$PYTHON_VERSION/bin/python2.7 /usr/local/bin/python2.7
+RUN ln -s $PYENV_ROOT/versions/$PYTHON_VERSION/bin/pip /usr/local/bin/pip
+RUN ln -s $PYENV_ROOT/versions/$PYTHON_VERSION/bin/pip2 /usr/local/bin/pip2
+RUN ln -s $PYENV_ROOT/versions/$PYTHON_VERSION/bin/pip2.7 /usr/local/bin/pip2.7
 
 # Clean cache
 RUN yum clean all

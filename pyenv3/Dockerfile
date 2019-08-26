@@ -14,7 +14,7 @@ RUN bash -c 'curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/mas
 ENV PATH $PYENV_ROOT/bin:$PATH
 ENV PYTHON_VERSION $PYTHON_VERSION
 
-RUN yum install -y readline readline-devel sqlite sqlite-devel openssl openssl-devel openssl-libs tk-devel lzma-libs lzma-devel
+RUN yum install -y readline readline-devel sqlite sqlite-devel openssl openssl-devel openssl-libs tk-devel xz xz-devel libffi-devel findutils lib-devel bzip2 bzip2-devel
 
 RUN pyenv install $PYTHON_VERSION
 

@@ -8,7 +8,7 @@ BRANCHES=(centos7)
 LATEST=centos7
 BASETAG=biocorecrg/centos-perlbrew
 
-TEMPDIR=/scratch/tmp
+TEMPDIR=$HOME/tmp
 WORKDIR=$TEMPDIR/docker-centos-perlbrew
 
 if [ -d "$WORKDIR" ]; then

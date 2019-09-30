@@ -26,7 +26,7 @@ RUN ln -s $PYENV_ROOT/versions/$PYTHON_VERSION/bin/python /usr/local/bin/python
 RUN ln -s $PYENV_ROOT/versions/$PYTHON_VERSION/bin/python3 /usr/local/bin/python3
 RUN ln -s $PYENV_ROOT/versions/$PYTHON_VERSION/bin/pip /usr/local/bin/pip
 RUN ln -s $PYENV_ROOT/versions/$PYTHON_VERSION/bin/pip3 /usr/local/bin/pip3
-RUN ln -s $PYENV_ROOT/versions/$PYTHON2_VERSION/bin/python3 /usr/local/bin/python2
+RUN ln -s $PYENV_ROOT/versions/$PYTHON2_VERSION/bin/python2 /usr/local/bin/python2
 RUN ln -s $PYENV_ROOT/versions/$PYTHON2_VERSION/bin/pip2 /usr/local/bin/pip2
 
 # Clean cache

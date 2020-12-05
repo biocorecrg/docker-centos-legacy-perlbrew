@@ -11,7 +11,7 @@ ARG PERL_BUILD=
 # Base Perl and builddep
 RUN yum install -y perl
 RUN yum-builddep -y perl
-RUN yum install -y bzip2 zip
+RUN yum install -y bzip2 zip procps
 RUN yum groupinstall -y 'Development Tools'
 
 RUN mkdir -p $PERLBREW_ROOT
